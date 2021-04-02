@@ -2,6 +2,10 @@
 
 This is the front end part of the CVE Dashboard I am working on. It reads a CVE.json file from public folder. 
 
+`npm install` to install all node modules
+
+`npm start` to start the app locally on port 3000
+
 ## TODO
 - Unit tests
 - Code comments
