@@ -7,7 +7,7 @@ This is the front end part of the CVE Dashboard I am working on. It reads a CVE.
 - Code comments
 - Further breaking up of components
 - Chart implementation
-- 
+
 ## Components
 
 ### Dashboard
