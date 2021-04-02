@@ -1,0 +1,1 @@
+declare type Row = {id:string, date:string, severity:'HIGH'|'MEDIUM'|'LOW', description: string, month: string, year: number}

@@ -1,31 +1,46 @@
-# CVE Dashboard
+# Getting Started with Create React App
 
-This is the front end part of the CVE Dashboard I am working on. It reads a CVE.json file from public folder. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## TODO
-- Unit tests
-- Code comments
-- Further breaking up of components
-- Chart implementation
+## Available Scripts
 
-## Components
+In the project directory, you can run:
 
-### Dashboard
-A stateful component handling state for all the other components. If I had more time, I would break it down to smaller components as it has become quite long and difficult to navigate. 
+### `yarn start`
 
-### Data Grid
-This is a grid delivered by Material-UI Labs. I decided to choose it because it has built-in filtration and sorting, that can be passed in props. This was very convenient, because the project required me to build it quickly and creating a grid from scratch would take much more time. Ideally, I would improve the usability but I would use the component anyway. At the moment, I allow sorting and filtration on almost every column. The search component uses the filtration to search using CVE-ID. One of my initial ideas for presenting the data was implementation of endless scroll but I believe that wouldn't be very clear for the dashboard's front page. This could be implemented on a dedicated page. For the multiple filtration, I needed to use the commercial XGrid instead of MIT DataGrid. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Search
-It is a simple component that uses filtration built in the Data Grid. Users can filter the data by CVE-ID. 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Chart
-Is not functional as I did not have a chance to implement the back-end that would process the data on the server side. I could have an attempt to process that on the client side but, in my opinion, it would be inefficient. The chart uses the Recharts library that allowed me to create the chart quickly. I used it because it was recommended by Material-UI. 
+### `yarn test`
 
-### Sidebar
-- Select Year: Dashboard extracts all the years from the CVE.json and creates a Set converted to an array to present all the years in the document. It filters the year as expected in the updated version. 
-- Severity: This is a set-in-stone checkbox that is not dynamically generated. At the moment, it affects the visibility of the lines in the chart. In the future, if I had more time, I would like to link it to the data grid - to filter the data by severity. I was not sure if this was an expected functionality. 
-- Buttons: At the moment, we can see the reset button that resets the input from the sidebar. In the specification, we had two buttons - Apply and Reset. I decided to leave just the reset button as I believed it would make the app more dynamic. But after further consideration, I would implement the Apply button as well to execute the chosen filtering only when the button is clicked. I think this would make the app more predictable and intuitive. 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Conclusion
-This is what I achieved with my limited time (I spent around 3 hours on the app). If I had more time, I would implement the back-end (preferably NextJs, as this would handle fetching and processing data really well). I was close to reaching the specification and I will continue the project in my spare time. 
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
